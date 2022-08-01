@@ -1,7 +1,14 @@
+# setup
+gcloud config set project jwd-gcp-demos
+gcloud config set compute/zone us-central1-a
+
+# create gke cluster
+gcloud container clusters create demos
+
 # show deployment
-k get pods -w
 k get deploy -w
 k get rs -w
+k get pods -w
 k apply -f nginx.yaml
 
 # rolling update
@@ -19,3 +26,4 @@ k describe deployment nginx-deployment
 
 # scaling a deployment
 kubectl scale deployment/nginx-deployment --replicas=10
+
