@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: hello-deployment
   labels:
-    app: nginx
-    color: green
+    app: hello
+    version: 2.0
     track: prod
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: nginx
+      app: hello
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -19,12 +19,12 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx
-        color: green
+        app: hello
+        version: 2.0
         track: prod
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.16.1 
+      - name: hello-app
+        image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
         ports:
-        - containerPort: 80
+        - containerPort: 8080
