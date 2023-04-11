@@ -1,8 +1,8 @@
 # show deployment
 k apply -f nb.yaml
-k get pods -w
-k get deploy -w
-k get rs -w
+k get pods
+k get deploy
+k get rs
 
 # show rolling update
 k apply -f ng.yaml
