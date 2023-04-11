@@ -11,6 +11,8 @@ spec:
   selector:
     matchLabels:
       app: hello
+      version: "2.0"
+      track: canary
   strategy:
     type: RollingUpdate
     rollingUpdate:

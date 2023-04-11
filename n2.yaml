@@ -11,6 +11,8 @@ spec:
   selector:
     matchLabels:
       app: hello
+      version: "2.0"
+      track: prod
   strategy:
     type: RollingUpdate
     rollingUpdate:
