@@ -12,7 +12,7 @@ spec:
     matchLabels:
       app: nginx
   strategy:
-    type: RollingUpdate # replace with replace
+    type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 1
       maxSurge: 1
@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.14.2 #replace with 1.16.1 for rolling update
+        image: nginx
         ports:
         - containerPort: 80
