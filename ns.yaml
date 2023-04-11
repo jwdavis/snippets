@@ -6,6 +6,7 @@ spec:
   type: LoadBalancer
   selector:
     app: nginx
+    color: green
   ports:
   - name: http
     port: 80
