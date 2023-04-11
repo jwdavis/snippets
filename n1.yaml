@@ -4,7 +4,7 @@ metadata:
   name: hello-deployment
   labels:
     app: hello
-    version: 1.0
+    version: "1.0"
     track: prod
 spec:
   replicas: 10
@@ -20,7 +20,7 @@ spec:
     metadata:
       labels:
         app: hello
-        version: 1.0
+        version: "1.0"
         track: prod
     spec:
       containers:
